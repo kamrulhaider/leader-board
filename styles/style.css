@@ -16,7 +16,8 @@ main {
   background-color: #ffffff;
   width: 870px;
   border-radius: 5px;
-  margin-bottom: 21px;
+  padding: 30px;
+  margin: 3px 3px 21px 3px;
 }
 hr {
   border: 1px solid #d1d1d1;
@@ -27,6 +28,7 @@ header {
   background-color: #562eff;
   display: flex;
   justify-content: center;
+  margin-bottom: 36px;
 }
 .logo-menu {
   display: flex;
@@ -34,8 +36,17 @@ header {
   width: 870px;
   padding: 20px 0;
 }
+.logo {
+  display: flex;
+  align-items: center;
+}
 .logo img {
   width: 10%;
+}
+.logo-text {
+  font-size: 24px;
+  color: #ffffff;
+  margin-left: 16px;
 }
 .menu {
   display: flex;
