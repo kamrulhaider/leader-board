@@ -5,6 +5,7 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #f3f1ff;
+  margin: 0;
 }
 main {
   display: flex;
@@ -19,6 +20,35 @@ main {
 }
 hr {
   border: 1px solid #d1d1d1;
+}
+
+/* header styles */
+header {
+  background-color: #562eff;
+  display: flex;
+  justify-content: center;
+}
+.logo-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 870px;
+  padding: 20px 0;
+}
+.logo img {
+  width: 10%;
+}
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menu a,
+.menu img {
+  text-decoration: none;
+  color: #ffffff;
+  margin-left: 20px;
+}
+.menu img {
+  width: 100%;
 }
 /* top player style */
 .top-player {
@@ -123,8 +153,14 @@ hr {
   .container {
     width: 100%;
   }
+  .players,
   .blogs,
   .courses {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .top-players,
+  .top-blogs,
+  .courses {
+    padding: 0 30px;
   }
 }
