@@ -9,11 +9,20 @@ function reset() {
 };
 reset();
 
+let clickCount = 0;
+function clicks() {
+    clickCount += 1;
+    return clickCount;
+}
 document.getElementById('ul-btn').addEventListener('click', function () {
     const ulList = document.getElementById('list');
     const newLi = document.createElement('li');
     newLi.innerText = 'new item';
-    ulList.appendChild(newLi);
+    const appending = ulList.appendChild(newLi);
+    const newCount = clicks();
+    if (newCount == 5) {
+        document.getElementById('ul-btn').disabled = true;
+    }
 });
 
 document.getElementById('increase-btn').addEventListener('click', function () {
@@ -21,5 +30,8 @@ document.getElementById('increase-btn').addEventListener('click', function () {
     const atributGet = inputValue.value;
     const attributeValue = parseInt(atributGet);
     const newValue = attributeValue + 1;
+    if (newValue == 5) {
+        document.getElementById('increase-btn').disabled = true;
+    }
     inputValue.value = newValue;
 });
